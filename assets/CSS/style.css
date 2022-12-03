@@ -13,88 +13,93 @@ body{
                          "main       main"
                          "footer     footer";
 }
-
 nav{
-    background-color: #D67504;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #D67504;
+    width: 100%;
+    height: 100px;
+    justify-content:space-between;
     align-items: center;
     position: fixed;
     top: 0px;
-    width: 100%;
     z-index: 2; 
-    grid-area: nav;
     padding: 10px;
     font-size: 20px;
 }
 
-nav ul{
-    list-style-type: none;
-    display: flex;
-    order: 3;
-}
-
-nav li a {
-    text-decoration: none;
-    color: black;
-    padding: 20px;
-   
-}
-
 nav .logo{
     padding: 5px 20px;
-    order: 1;
+    
+}
+.checkbtn{
+    font-size: 25px;
+    color: black;
+    margin: 5px 25px 5px 5px;
 }
 
-nav li a:hover{
+ul{
+    position:fixed;
+    width:100%;
+    height:0vh;
+    top:120px;
+    background: #D67504;
+    text-align:center;
+    transition: all .2s;
+    list-style-type: none;
+    margin-left: -10px;
+}
+ul li{
+    display:none;
+    line-height:30px;
+    margin:50px 0;
+    transition: all .5s;
+}
+ul li a{
+    text-decoration: none;
+    color:black;
+    font-size:16px;
     font-weight: bold;
 }
-
-.fa-bars{
-    visibility:hidden;
-    font-size: 24px;
-    padding: 15px;
-    order: 2;
-    
+ul li a.active, ul li a:hover{
+    color:#3E403E;
+    transition:#3E403E;
+}
+#check{
+    display: none;
+}
+#check:checked ~ ul{
+    height: 100vh;
+}
+#check:checked ~ ul li{
+    display: block;
 }
 
-@media (max-width: 848px){
-  
-    nav ul{
-        flex-direction:column;
-        position: fixed;
-        top: 0;
-        left: -250px;
-        background-color: #D67504;
-        width: 250px;
-        height: 100vh;
-        transition: .2s;
-        z-index: 100;
-        justify-content: center;
-        font-size: 30px;
-        gap: 20px;
-        
+@media screen and (min-width:886px){
+    nav{
+        height: 100px;
     }
-    nav li a {
-        margin: 20px;
+    .checkbtn{
+        display: none;
     }
-    .fa-bars{
-        visibility:visible;
-        order: 1;
+    ul{
+        position: relative;
+        height: 100px;
+        top: -100px;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right:50px;
     }
-    .fa-bars:hover + nav ul {
-        left: 0;
+    ul li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 5px 20px;
+        transition: none;
     }
-    nav ul:hover{
-        left: 0;
+    ul li a{
+        font-size: 20px;
     }
-    nav .logo{
-        padding: 5px 20px;
-        order: 2;
-        display: flex;
-        justify-content: center;
-    }
-    
 }
 
 header{
@@ -106,7 +111,7 @@ header{
     margin-bottom: 110px;
     position: relative;
     z-index: 1;
-    top: 100px;
+    top: 110px;
     grid-area: header;
 }
 @media (max-width: 624px){

@@ -1,0 +1,43 @@
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .titulos{
+        display: flex;
+        background-color: #FFBD40;
+        height: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+    }
+    .prod{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: auto;
+        border: 5px double;
+        margin: 10px 20px;
+        padding: 5px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: white;
+        .prod__img{
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .prod__titulo{
+            text-align: center;
+            font-size: 18px;
+        }
+        .prod__precio{
+            font-size: 18px;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}

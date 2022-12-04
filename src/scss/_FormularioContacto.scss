@@ -1,0 +1,103 @@
+#formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .form{
+        width: 900px;
+        background-color: #C2C0A6;
+        margin: 20px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1f 1f 1f 1f;
+        grid-template-areas: "z1 z2"
+                            "z3 z3"
+                            "z4 z5"
+                            "z6 z6";
+        .form{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            
+        }
+        .form__box, .form__msj{
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #D67504;
+            margin-top: 10px;
+            font-size: 15px;
+            padding: 5px;
+            width: 95%;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+.form__name{
+    grid-area: z1;
+    font-size: 25px;
+}
+
+.form__email{
+    grid-area: z2;
+    font-size: 25px;
+}
+
+form legend{
+    grid-area: z3;
+    margin: 10px;
+    font-size: 25px;
+
+}
+
+.form__select{
+    grid-area: z4;
+    padding: 5px;
+    width: 95%;
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D67504;
+}
+
+.form__msj{
+    grid-area: z5;
+    font-size: 15px;
+    width: 90%;
+}
+
+form button:nth-child(6){
+    grid-area: z6;
+    justify-self: center;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.contacto{
+    font-size: 20px;
+    margin: 15px;
+    font-style: italic;
+}
+
+@media (max-width: 690px){
+    .form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1f 1f 1f 1f 1f 1f;
+        grid-template-areas: "z1 z1"
+                             "z2 z2"
+                             "z3 z3"
+                             "z4 z4"
+                             "z5 z5"
+                             "z6 z6";
+    }
+}

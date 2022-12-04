@@ -1,0 +1,24 @@
+#indextarj{
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .titulos2{
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: 20px;
+    }
+    #tarj{
+    display: flex;
+    flex-direction: row;
+    }
+    @media (max-width: 878px){
+        flex-direction: column;
+    }
+}

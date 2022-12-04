@@ -1,0 +1,13 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "nav     nav"
+                         "header  header"
+                         "main    main"
+                         "footer  footer";
+    main{
+        grid-area: main;
+    }
+}

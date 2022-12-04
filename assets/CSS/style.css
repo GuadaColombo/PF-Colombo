@@ -1,9 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
+/*Buscar como se hacia correctamente*/
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -134,17 +136,15 @@ footer {
   display: flex;
   justify-content: center;
 }
-
-footer h3 {
-  color: white;
-  padding: 15px;
-}
-
-.redes {
+footer .redes {
   display: flex;
   flex-direction: row;
   width: 160px;
   align-items: center;
+}
+footer .redes h3 {
+  color: white;
+  padding: 15px;
 }
 
 .btn {
@@ -183,8 +183,8 @@ footer h3 {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 878px) {
-  #indextarj {
+@media (max-width: 900px) {
+  #indextarj #tarj {
     flex-direction: column;
   }
 }
@@ -204,8 +204,28 @@ footer h3 {
   background-color: #C2C0A6;
   border-radius: 5px;
 }
+@media (max-width: 745px) {
+  .nosotros .nos {
+    width: 350px;
+    height: 780px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 440px) {
+  .nosotros .nos {
+    width: 270px;
+    height: 890px;
+  }
+}
 .nosotros .nos .nos__img {
   width: 100%;
+}
+@media (max-width: 745px) {
+  .nosotros .nos .nos__img {
+    width: 100%;
+    height: 480px;
+    align-content: center;
+  }
 }
 .nosotros .nos .nos__texto {
   display: flex;
@@ -216,35 +236,17 @@ footer h3 {
 .nosotros .nos .nos__texto .nos__titulo {
   display: flex;
   text-decoration: underline;
-  margin: 5px;
+  margin: 8px;
   padding: 0px 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   font-size: 40px;
 }
+.nosotros .nos .nos__texto p {
+  font-size: 16px;
+}
 
-@media (max-width: 745px) {
-  .nos {
-    width: 350px;
-    height: 780px;
-    flex-direction: column;
-  }
-  .nos__img {
-    width: 100%;
-    height: 480px;
-    align-content: center;
-  }
-}
-@media (max-width: 440px) {
-  .nos {
-    width: 270px;
-    height: 880px;
-  }
-  .nos__texto p {
-    gap: 10px;
-  }
-}
 /*Productos*/
 .tarjetas {
   display: flex;
@@ -290,94 +292,6 @@ footer h3 {
   text-align: center;
 }
 
-/*Contacto*/
-#formulario {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#formulario .form {
-  width: 900px;
-  background-color: #C2C0A6;
-  margin: 20px;
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1f 1f 1f 1f;
-  grid-template-areas: "z1 z2" "z3 z3" "z4 z5" "z6 z6";
-}
-#formulario .form .form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-#formulario .form .form__box, #formulario .form .form__msj {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #D67504;
-  margin-top: 10px;
-  font-size: 15px;
-  padding: 5px;
-  width: 95%;
-  justify-self: center;
-  align-self: center;
-}
-
-.form__name {
-  grid-area: z1;
-  font-size: 25px;
-}
-
-.form__email {
-  grid-area: z2;
-  font-size: 25px;
-}
-
-form legend {
-  grid-area: z3;
-  margin: 10px;
-  font-size: 25px;
-}
-
-.form__select {
-  grid-area: z4;
-  padding: 5px;
-  width: 95%;
-  margin-left: 10px;
-  font-size: 15px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #D67504;
-}
-
-.form__msj {
-  grid-area: z5;
-  font-size: 15px;
-  width: 90%;
-}
-
-form button:nth-child(6) {
-  grid-area: z6;
-  justify-self: center;
-  width: 30%;
-  margin-top: 20px;
-}
-
-.contacto {
-  font-size: 20px;
-  margin: 15px;
-  font-style: italic;
-}
-
-@media (max-width: 690px) {
-  .form {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1f 1f 1f 1f 1f 1f;
-    grid-template-areas: "z1 z1" "z2 z2" "z3 z3" "z4 z4" "z5 z5" "z6 z6";
-  }
-}
 /*acerca del té*/
 .his {
   display: flex;
@@ -405,9 +319,11 @@ form button:nth-child(6) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0px 15px;
 }
 
 .historia__titulo {
+  display: flex;
   align-content: center;
   text-decoration: underline;
   padding: 10px;
@@ -419,57 +335,60 @@ form button:nth-child(6) {
   font-size: 18px;
 }
 
-@media (max-width: 1154px) {
-  .historia {
-    flex-direction: column;
-    height: 1460px;
-  }
+/*
+@media (max-width:1154px){
+    .historia{
+        flex-direction: column;
+        height: 1460px;
+    }
 }
-@media (max-width: 1102px) {
-  .historia {
-    height: 1360px;
-  }
+
+@media (max-width:1102px){
+    .historia{
+        height: 1360px;
+    }
 }
-@media (max-width: 962px) {
-  .historia {
-    height: 1260px;
-  }
+
+@media (max-width:962px){
+    .historia{
+        height: 1260px;
+    }
 }
-@media (max-width: 872px) {
-  .historia {
-    height: 1190px;
-  }
+@media (max-width:872px){
+    .historia{
+        height: 1190px;
+    }
 }
-@media (max-width: 778px) {
-  .historia {
-    height: 1130px;
-  }
+@media (max-width:778px){
+    .historia{
+        height: 1130px;
+    }
 }
-@media (max-width: 672px) {
-  .historia {
-    height: 1090px;
-  }
+@media (max-width:672px){
+    .historia{
+        height: 1090px;
+    }
 }
-@media (max-width: 466px) {
-  .historia {
-    height: 1150px;
-  }
+@media (max-width:466px){
+    .historia{
+        height: 1150px;
+    }
 }
-@media (max-width: 416px) {
-  .historia {
-    height: 1190px;
-  }
+@media (max-width:416px){
+    .historia{
+        height: 1190px;
+    }
 }
-@media (max-width: 368px) {
-  .historia {
-    height: 1280px;
-  }
+@media (max-width:368px){
+    .historia{
+        height: 1280px;
+    }
 }
-@media (max-width: 354px) {
-  .historia {
-    height: 1380px;
-  }
-}
+@media (max-width:354px){
+    .historia{
+        height: 1380px;
+    }
+} */
 .tiposte {
   display: flex;
   justify-content: center;
@@ -561,6 +480,7 @@ form button:nth-child(6) {
 .contenido h2 {
   margin: 10px;
   font-size: 40px;
+  text-align: center;
 }
 
 .contenido p {
@@ -599,6 +519,93 @@ form button:nth-child(6) {
 
 .tipo:nth-child(5) {
   grid-area: z4;
+}
+
+/*Contacto*/
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.formulario .form {
+  width: 900px;
+  background-color: #C2C0A6;
+  margin: 20px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1f 1f 1f 1f;
+  grid-template-areas: "z1 z2" "z3 z3" "z4 z5" "z6 z6";
+}
+@media (max-width: 700px) {
+  .formulario .form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f 1f 1f 1f 1f 1f;
+    grid-template-areas: "z1 z1" "z2 z2" "z3 z3" "z4 z4" "z5 z5" "z6 z6";
+  }
+}
+.formulario .form label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.formulario .form .form__name {
+  grid-area: z1;
+  font-size: 25px;
+}
+.formulario .form .form__email {
+  grid-area: z2;
+  font-size: 25px;
+}
+.formulario .form legend {
+  grid-area: z3;
+  margin: 10px;
+  font-size: 25px;
+}
+.formulario .form .form__select {
+  grid-area: z4;
+  padding: 5px;
+  width: 95%;
+  margin-left: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #D67504;
+}
+.formulario .form .form__msj {
+  grid-area: z5;
+  width: 90%;
+}
+@media (max-width: 700px) {
+  .formulario .form .form__msj {
+    width: 92%;
+  }
+}
+.formulario .form button:nth-child(6) {
+  grid-area: z6;
+  justify-self: center;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.form__box, .form__msj {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #D67504;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px;
+  width: 95%;
+  justify-self: center;
+  align-self: center;
+}
+
+.contacto {
+  font-size: 20px;
+  margin: 15px;
+  font-style: italic;
 }
 
 /*Paquete de regalo*/

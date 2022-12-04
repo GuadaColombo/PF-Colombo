@@ -1,4 +1,5 @@
 @import "reset";
+@import "font";
 @import "layout";
 @import "nav";
 @import "header";
@@ -10,11 +11,13 @@
 @import "nosotros";
 /*Productos*/
 @import "tarjetas";
-/*Contacto*/
-@import "FormularioContacto";
 /*acerca del té*/
 @import "HistoriaTe";
 @import "TiposDeTe";
+
+/*Contacto*/
+@import "FormularioContacto";
+
 
 
 

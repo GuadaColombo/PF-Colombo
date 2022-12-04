@@ -11,8 +11,22 @@
         justify-content: center;
         background-color: #C2C0A6;
         border-radius: 5px;
+        @media (max-width: 745px){
+            width: 350px;
+            height: 780px;
+            flex-direction: column;        
+        }
+        @media (max-width: 440px){
+            width: 270px;
+            height: 890px;
+        }
         .nos__img{
             width: 100%;
+            @media (max-width: 745px){
+                width: 100%;
+                height: 480px;
+                align-content: center;
+            }
         }
         .nos__texto{
             display: flex;
@@ -22,37 +36,16 @@
             .nos__titulo{
                 display: flex;
                 text-decoration: underline;
-                margin: 5px;
+                margin: 8px;
                 padding: 0px 20px;
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
                 font-size: 40px;
             }
+            p{
+                font-size: 16px;
+            }
         }
-    }
-}
-
-@media (max-width: 745px){
-    .nos{
-        width: 350px;
-        height: 780px;
-        flex-direction: column;
-        
-    }
-    .nos__img{
-        width: 100%;
-        height: 480px;
-        align-content: center;
-    }
-}
-
-@media (max-width: 440px){
-    .nos{
-        width: 270px;
-        height: 880px;
-    }
-    .nos__texto p{
-        gap: 10px;
     }
 }

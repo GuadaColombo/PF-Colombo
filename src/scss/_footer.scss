@@ -5,16 +5,15 @@ footer{
     height: 125px;
     display: flex;
     justify-content: center;
+    .redes{
+        display: flex;
+        flex-direction: row;
+        width: 160px;
+        align-items: center;
+        h3{
+            color: white;
+            padding: 15px;
+        }
+    }
 }
 
-footer h3{
-    color: white;
-    padding: 15px;
-}
-
-.redes{
-    display: flex;
-    flex-direction: row;
-    width: 160px;
-    align-items: center;
-}

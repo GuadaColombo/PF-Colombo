@@ -17,8 +17,8 @@
     #tarj{
     display: flex;
     flex-direction: row;
-    }
-    @media (max-width: 878px){
-        flex-direction: column;
+        @media (max-width: 900px){
+            flex-direction: column;
+        }
     }
 }

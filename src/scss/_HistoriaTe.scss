@@ -24,9 +24,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0px 15px;
 }
 
 .historia__titulo{
+    display: flex;
     align-content: center;
     text-decoration: underline;
     padding: 10px;
@@ -37,6 +39,8 @@
     font-size: 18px;
 }
 
+
+/*
 @media (max-width:1154px){
     .historia{
         flex-direction: column;
@@ -89,4 +93,4 @@
     .historia{
         height: 1380px;
     }
-}
+} */

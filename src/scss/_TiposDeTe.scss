@@ -2,132 +2,125 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-.tipo{
-    height: 650px;
-    width: 91%;
-    border-radius: 5px;
-    margin: 5px;
-    justify-content: center;
-    align-items: center;
-    background:#C2C0A6;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr;
-    grid-template-areas: "zt zt zt zt"
-                         "z1 z2 z3 z4";
-}
-@media (max-width:1146px){
-    .tipo{
-        width: 650px;
-        height: 1160px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1fr 1fr 1fr 1fr;
-        grid-template-areas: "zt zt"
-                            "z1 z2"
-                            "z1 z2"
-                            "z3 z4"
-                            "z3 z4";
+    .tipos{
+        height: 650px;
+        width: 91%;
+        border-radius: 5px;
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        background:#C2C0A6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas: "zt zt zt zt"
+                             "z1 z2 z3 z4";
+        &:nth-child(2){
+            grid-area: z1;
         }
-}
-@media (max-width:694px){
-    .tipo{
-        width: 380px;
-        height: 2300px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr 1fr 1fr 1fr;
-        grid-template-areas: "zt"
-                            "z1"
-                            "z1"
-                            "z2"
-                            "z2"
-                            "z3"
-                            "z3"
-                            "z4"
-                            "z4";
+        &:nth-child(3){
+            grid-area: z2;
+        }
+        &:nth-child(4){
+            grid-area: z3;
+        }
+        &:nth-child(5){
+            grid-area: z4;
+        }
+
+        @media (max-width:1146px){
+            width: 650px;
+            height: 1160px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+            grid-template-areas: "zt zt"
+                                "z1 z2"
+                                "z1 z2"
+                                "z3 z4"
+                                "z3 z4";
+        }
+        @media (max-width:694px){
+            width: 380px;
+            height: 2300px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+            grid-template-areas: "zt"
+                                 "z1"
+                                 "z1"
+                                 "z2"
+                                 "z2"
+                                 "z3"
+                                 "z3"
+                                 "z4"
+                                 "z4";
+        }
+        @media (max-width:438px){
+            width: 320px;
+            height: 2500px;
+            grid-template-rows: 160px 1fr 1fr 1fr 1fr;
+        }
+        .tipostitulo{
+            grid-area: zt;
+            display: flex;
+            text-decoration: underline;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            justify-self: center;
+            align-self: center;
+            gap: 10px;
+            font-size: 40px;
+        }
+        .tiposcard{
+            display: flex;
+            margin: 5px;
+            justify-self: center;
+            align-self: center;
+            .tiposcontenedor{
+                height: 500px;
+                margin: 10px;
+                overflow: hidden;
+                &:hover{
+                    cursor: pointer;
+                }
+                &:hover .contenidotipos{
+                    height: 240px;
+                    bottom: 240px;
+                    background: rgb(27, 27, 27, .5);
+                }
+                &:hover .contenidotipos p{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .imgtes{
+                    height: 500px;
+                    width: 230px;
+                    border-radius: 5px;
+                }
+                .contenidotipos{
+                    height: 70px;
+                    width: 230px;
+                    padding: 5px;
+                    box-sizing: border-box;
+                    position: relative;
+                    bottom: 65px;
+                    background: rgb(27, 27, 27, .5);
+                    color: black;
+                    transition: .9s;
+                    h2{
+                        margin: 10px;
+                        font-size: 40px;
+                        text-align: center;
+                    }
+                    p{
+                        font-size: 20px;
+                        margin: 20px;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                
+                }
+            }
+        }
     }
-}
-@media (max-width:438px){
-    .tipo{
-        width: 320px;
-        height: 2500px;
-        grid-template-rows: 160px 1fr 1fr 1fr 1fr;
-    }
-}
-.tipostitulo{
-    grid-area: zt;
-    display: flex;
-    text-decoration: underline;
-    padding: 10px;
-    margin: 10px;
-    justify-self: center;
-    align-self: center;
-    gap: 10px;
-    font-size: 40px;
-}
-.card{
-    display: flex;
-    margin: 5px;
-    justify-self: center;
-    align-self: center;
-}
-.contenedor{
-    height: 500px;
-    margin: 10px;
-    overflow: hidden;
-}
-.imgtes{
-    height: 500px;
-    width: 230px;
-    border-radius: 5px;
-}
-.contenido{
-    height: 70px;
-    width: 230px;
-    padding: 5px;
-    box-sizing: border-box;
-    position: relative;
-    bottom: 65px;
-    background: rgb(27, 27, 27, .5);
-    color: black;
-    transition: .9s;
-}
-.contenido h2{
-    margin: 10px;
-    font-size: 40px;
-    text-align: center;
-}
-.contenido p{
-    font-size: 20px;
-    margin: 20px;
-    visibility: hidden;
-    opacity: 0;
-}
-.contenedor:hover{
-    cursor: pointer;
-}
-.contenedor:hover  .contenido{
-    height: 240px;
-    bottom: 240px;
-    background: rgb(27, 27, 27, .5);
-}
-.contenedor:hover p{
-    opacity: 1;
-    visibility: visible;
-}
-.tipo:nth-child(2){
-    grid-area: z1;
-}
-
-.tipo:nth-child(3){
-    grid-area: z2;
-}
-
-.tipo:nth-child(4){
-    grid-area: z3;
-}
-
-.tipo:nth-child(5){
-    grid-area: z4;
 }

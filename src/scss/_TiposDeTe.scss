@@ -69,7 +69,7 @@
             justify-self: center;
             align-self: center;
             gap: 10px;
-            font-size: 40px;
+            font-size: clamp(25px, 5vw, 40px);
         }
         .tiposcard{
             display: flex;

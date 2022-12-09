@@ -4,16 +4,30 @@ footer{
     width: 100%;
     height: 125px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     .redes{
         display: flex;
-        flex-direction: row;
-        width: 160px;
+        width: 100%;
         align-items: center;
-        h3{
+        justify-content: center;
+        a{
+            margin: 15px;
+            i{
+                font-size: 30px;
+                color:#D67504;
+                
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        p{
             color: white;
-            padding: 15px;
+            text-align: center;
         }
     }
 }
-

@@ -6,6 +6,7 @@
 
 body {
   font-family: Playfair Display;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1f 1fr 1fr 1fr;

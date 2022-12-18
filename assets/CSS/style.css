@@ -185,7 +185,7 @@ footer .copyright p {
   justify-content: center;
   align-items: center;
   padding: 5px;
-  font-size: 20px;
+  font-size: clamp(15px, 5vw, 20px);
 }
 #indextarj #tarj {
   display: flex;
@@ -440,7 +440,7 @@ footer .copyright p {
   position: relative;
   bottom: 65px;
   background: rgba(27, 27, 27, 0.5);
-  color: black;
+  color: white;
   transition: 0.9s;
 }
 .tiposte .tipos .tiposcard .tiposcontenedor .contenidotipos h2 {
@@ -489,6 +489,17 @@ footer .copyright p {
     width: 100%;
   }
 }
+.PaqRegalo .regalo .regalo__img2 {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 970px) {
+  .PaqRegalo .regalo .regalo__img2 {
+    width: 100%;
+  }
+}
 .PaqRegalo .regalo .regalo__texto {
   display: grid;
   grid-template-rows: 140px 40px 1fr 1fr;
@@ -518,7 +529,7 @@ footer .copyright p {
   text-decoration: underline;
   margin-top: 5px;
   padding: 10px;
-  font-size: 40px;
+  font-size: clamp(30px, 5vw, 40px);
   grid-area: zt;
 }
 .PaqRegalo .regalo .regalo__texto .regalo__precio {

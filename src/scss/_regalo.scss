@@ -26,6 +26,15 @@
                 width: 100%;
             }
         }
+        .regalo__img2{
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width:970px){
+                width: 100%;
+            }
+        }
         .regalo__texto{
             display: grid;
             grid-template-rows: 140px 40px 1fr 1fr;
@@ -53,7 +62,7 @@
                 text-decoration: underline;
                 margin-top: 5px;
                 padding: 10px;
-                font-size: 40px;
+                font-size: clamp(30px, 5vw, 40px);
                 grid-area: zt;
             }
             .regalo__precio{
